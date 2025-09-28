@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospital Management System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h2>Hospital Management System (Frontend Demo)</h2>
+
+    <!-- Add Patient -->
+    <div class="section">
+        <h4>Add Patient</h4>
+        <form id="patientForm" class="form-inline">
+            <input class="form-control" type="text" id="patientName" placeholder="Name" required>
+            <input class="form-control" type="number" id="patientAge" placeholder="Age" required>
+            <input class="form-control" type="text" id="patientGender" placeholder="Gender" required>
+            <input class="form-control" type="text" id="patientProblem" placeholder="Problem" required>
+            <button class="btn btn-primary" type="submit">Add Patient</button>
+        </form>
+        <div id="patientsList" style="margin-top:10px"></div>
+    </div>
+
+    <!-- Add Doctor -->
+    <div class="section">
+        <h4>Add Doctor</h4>
+        <form id="doctorForm" class="form-inline">
+            <input class="form-control" type="text" id="doctorName" placeholder="Name" required>
+            <input class="form-control" type="text" id="doctorSpecialty" placeholder="Specialty" required>
+            <button class="btn btn-primary" type="submit">Add Doctor</button>
+        </form>
+        <div id="doctorsList" style="margin-top:10px"></div>
+    </div>
+
+    <!-- Schedule Appointment -->
+    <div class="section">
+        <h4>Schedule Appointment</h4>
+        <form id="appointmentForm" class="form-inline">
+            <select class="form-control" id="appointmentPatient" required></select>
+            <select class="form-control" id="appointmentDoctor" required></select>
+            <input class="form-control" type="date" id="appointmentDate" required>
+            <input class="form-control" type="time" id="appointmentTime" required>
+            <button class="btn btn-success" type="submit">Schedule</button>
+        </form>
+        <div id="appointmentsList" style="margin-top:10px"></div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
